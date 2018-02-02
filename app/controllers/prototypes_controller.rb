@@ -22,6 +22,12 @@ class PrototypesController < ApplicationController
   def show
   end
 
+  def destroy
+    @prototype = Prototype.find(params[:id])
+    @prototype.destroy
+    redirect_to :root, notice: 'Your prototype infomation was successfully deleted'
+  end
+
   private
 
   def set_prototype

@@ -5,6 +5,8 @@
       %h3
         = prototype.title
       .proto-meta
+        .proto-delete
+          = link_to "削除", "/prototypes/#{current_user.id}", method: :delete
         .proto-user
           = link_to prototype.user.name, user_path(prototype.user)
         .proto-posted
