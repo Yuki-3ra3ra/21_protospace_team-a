@@ -6,6 +6,8 @@
       %h3
         = prototype.title
       .proto-meta
+        .proto-edit
+        = link_to '編集', "/prototypes/#{prototype.id}/edit", method: :get
         .proto-user
           = link_to prototype.user.name, user_path(prototype.user)
         .proto-posted
